@@ -20,3 +20,6 @@ class Contador:
 
     def Incrementar(self):
         return self.__valor_actual + self.__incremento
+
+    def reset(self):
+        self.__valor_actual = self.__valor_inicial
