@@ -21,6 +21,8 @@ Se desea crear una clase que funcione como un contador. Cuenta con los siguiente
   - En cualquier momento se puede conocer el valor actual del contador y se podrá resetear el valor del contador en cualquier momento. 
     Implemente los requisitos anteriores utilizando TDD.
 
+<br/><br/>
+
 1. Lo primero que debes hacer es crear un repositorio en GitHub donde alojaremos nuestra práctica.
 Primeramente, hacerlo privado hasta que lo entregues y el profesor te diga que lo cambies a
 público.
