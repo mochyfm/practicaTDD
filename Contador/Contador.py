@@ -17,3 +17,6 @@ class Contador:
 
     def getLimite(self):
         return self.__limite
+
+    def Incrementar(self):
+        return self.__valor_actual + self.__incremento
