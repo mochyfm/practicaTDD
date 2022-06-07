@@ -119,5 +119,24 @@ class TestContador(unittest.TestCase):
         self.assertEqual(test_reset.getValorActual(), inicial) 
         self.assertEqual(test_reset.getValorActual(), test_reset.getValorInicial()) 
 
+    def test_show(self):
+
+        """ Declaramos los valores del contador que usaremos para leer los valores que residen en el """
+
+        inicial = 0
+        incremento = 10
+        limite = 50
+
+        test_show = Contador(inicial, incremento, limite)
+
+        """ Utilizamos los getters creados para poder ver los resultados, deberán de ser exactamente iguales
+            segun se cumplan las circunstancias. """
+
+        self.assertEqual(test_show.getValorInicial(), inicial)
+        self.assertEqual(test_show.getIncrementador(), incremento)
+        self.assertEqual(test_show.getLimite(), limite)
+
+        self.assertEqual(test_show.getValorActual() + test_show.getIncrementador(), test_show.getIncrementador() )
+
     if __name__ == '__main__':
         unittest.main()
