@@ -94,6 +94,30 @@ class TestContador(unittest.TestCase):
 
         self.assertEqual(test_incrementar.getIncrementador(), resultado) 
 
+    def test_reset(self):
+
+        """ Declaramos el contador que vamos a utilizar para el test """
+
+        inicial = 0
+        incremento = 10
+        limite = 50
+
+        test_reset = Contador(inicial, incremento, limite)
+
+        """ Utilizamos la funcion Incrementar para que incremente varias veces el valor del contador """
+
+        test_reset.Incrementar()
+        test_reset.Incrementar()
+        test_reset.Incrementar()
+
+        """ Una vez tenemos un valor decente, reseteamos el contador """
+
+        test_reset.reset()
+
+        """ Y ahora comprobamos que se ha reseteado correctamente """
+
+        self.assertEqual(test_reset.getValorActual(), inicial) 
+        self.assertEqual(test_reset.getValorActual(), test_reset.getValorInicial()) 
 
     if __name__ == '__main__':
         unittest.main()
