@@ -64,6 +64,36 @@ class TestContador(unittest.TestCase):
         
         self.assertNotEqual(test_igualacion_valores.getLimite(), 10)
         self.assertEqual(test_igualacion_valores.getLimite(), limite)
+
+    def test_incrementar(self):
         
+        """ Declaramos el contador que vamos a utilizar para el test """
+
+        inicial = 0
+        incremento = 5
+        limite = 20
+
+        test_igualacion_valores = Contador(inicial, incremento, limite)
+
+        """ Utilizamos la funcion Incrementar para que incremente una vez el valor del contador, 
+            y lo almacenamos en una variable """
+
+        resultado = test_igualacion_valores.Incrementar()
+
+        """ Comprobamos que el valor es el resultado del valor inicial más el incrementador, 
+        ya que deberá haberse incrementado una vez. Pondremos evidentemente que si el límite es igual 
+        o menor que al incrementador, deberá ser el valor inicial ya que es lo que se nos pide """
+
+        if incremento >= limite:
+            self.assertEqual(test_igualacion_valores.getIncrementador(), inicial)
+        else: 
+            self.assertEqual(resultado, inicial + incremento)
+
+        # También comprobamos que el valor se almacena correctamente tanto en el Getter del incrementador 
+        # como en el propio resultado de este.
+
+        self.assertEqual(test_igualacion_valores.getIncrementador(), resultado) 
+
+
     if __name__ == '__main__':
         unittest.main()
