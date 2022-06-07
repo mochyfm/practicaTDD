@@ -22,9 +22,9 @@ class TestContador(unittest.TestCase):
 
         """ Verifica que los valores se asignan como deberian """
 
-        self.assertEqual(test_funcionamiento.valor_inicial, inicial)
-        self.assertEqual(test_funcionamiento.incremento, incremento)
-        self.assertEqual(test_funcionamiento.limite, limite)
+        self.assertEqual(test_funcionamiento.getValorInicial(), inicial)
+        self.assertEqual(test_funcionamiento.getIncrementador(), incremento)
+        self.assertEqual(test_funcionamiento.getLimite(), limite)
 
     def test_valores_default(self):
 
@@ -38,8 +38,8 @@ class TestContador(unittest.TestCase):
 
         """ Verificamos que los valores que no han sido asignados tienen los valores esperados """
 
-        self.assertEqual(test_valores_default.valor_inicial, 0)
-        self.assertEqual(test_valores_default.incremento, 1)
+        self.assertEqual(test_valores_default.getValorInicial(), 0)
+        self.assertEqual(test_valores_default.getIncrementador(), 1)
 
     def test_igualacion_valores(self):
 
@@ -56,13 +56,14 @@ class TestContador(unittest.TestCase):
         """ Igualamos los valores y comprobamos posteriormente si NO han sido igualados, 
             ya que se pide que no sea igual """
 
-        test_igualacion_valores.__valor_inicial = 5
-        test_igualacion_valores.__incremento = 1
-        test_igualacion_valores.__limite = 10
+        self.assertNotEqual(test_igualacion_valores.getValorInicial(), 5)
+        self.assertEqual(test_igualacion_valores.getValorInicial(), inicial)
 
-        self.assertNotEqual(test_igualacion_valores.__valor_inicial, 5)
-        self.assertNotEqual(test_igualacion_valores.__incremento, 1)
-        self.assertNotEqual(test_igualacion_valores.__limite, 10)
+        self.assertNotEqual(test_igualacion_valores.getIncrementador(), 1)
+        self.assertEqual(test_igualacion_valores.getIncrementador(), incremento)
+        
+        self.assertNotEqual(test_igualacion_valores.getLimite(), 10)
+        self.assertEqual(test_igualacion_valores.getLimite(), limite)
         
     if __name__ == '__main__':
         unittest.main()
