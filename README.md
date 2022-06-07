@@ -13,12 +13,12 @@ _Esta práctica ha sido realizada por Moisés Fernández Muiña_
 **Desarrollo dirigido por pruebas.**
 
 Se desea crear una clase que funcione como un contador. Cuenta con los siguientes requisitos.
-  ● Al crear el contador indicamos el valor inicial del mismo, el incremento y el valor límite.
-  ● El valor inicial y el incremento tomarán un valor de 0 y 1 respectivamente si no se indica nada. El límite es necesario indicarlo siempre.
-  ● Ninguno de los tres valores (valor inicial, incremento y límite) pueden cambiarse una vez creado el contador.
-  ● Al incrementar el contador se suma al valor actual al incremento y nos indican si se superó el límite.
-  ● Cuando se supere el límite, el valor actual del contador vuelve a ser el valor inicial.
-  ● En cualquier momento se puede conocer el valor actual del contador y se podrá resetear el valor del contador en cualquier momento. 
+  - Al crear el contador indicamos el valor inicial del mismo, el incremento y el valor límite.
+  - El valor inicial y el incremento tomarán un valor de 0 y 1 respectivamente si no se indica nada. El límite es necesario indicarlo siempre.
+  - Ninguno de los tres valores (valor inicial, incremento y límite) pueden cambiarse una vez creado el contador.
+  - Al incrementar el contador se suma al valor actual al incremento y nos indican si se superó el límite.
+  - Cuando se supere el límite, el valor actual del contador vuelve a ser el valor inicial.
+  - En cualquier momento se puede conocer el valor actual del contador y se podrá resetear el valor del contador en cualquier momento. 
     Implemente los requisitos anteriores utilizando TDD.
 
 1. Lo primero que debes hacer es crear un repositorio en GitHub donde alojaremos nuestra práctica.
